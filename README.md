@@ -95,8 +95,8 @@ Expected behavior:
 ## Example Summary Card
 
 ```markdown
-<!-- architects-ledger-summary-card -->
-## Architect's Ledger
+<!-- devs-ledger-summary-card -->
+## Dev's Ledger
 Passive record of why key technical decisions were made in this MR.
 
 | # | Timestamp (UTC) | Author | Decision |

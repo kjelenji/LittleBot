@@ -65,13 +65,13 @@ private:
 class SummaryCard {
 public:
 	static std::string marker() {
-		return "<!-- architects-ledger-summary-card -->";
+		return "<!-- devs-ledger-summary-card -->";
 	}
 
 	static std::string render(const std::vector<DecisionEntry>& entries) {
 		std::ostringstream out;
 		out << marker() << "\n";
-		out << "## Architect's Ledger\n";
+		out << "## Dev's Ledger\n";
 		out << "Passive record of why key technical decisions were made in this MR.\n\n";
 
 		if (entries.empty()) {
@@ -151,9 +151,9 @@ private:
 	std::unordered_map<std::string, std::vector<DecisionEntry>> keyToEntries_;
 };
 
-class ArchitectLedgerBot {
+class DevLedgerBot {
 public:
-	ArchitectLedgerBot(GitLabAdapter adapter, LedgerStore store)
+	DevLedgerBot(GitLabAdapter adapter, LedgerStore store)
 		: adapter_(std::move(adapter)), store_(std::move(store)) {}
 
 	bool handleWebhook(const std::string& rawJsonPayload,
@@ -294,7 +294,7 @@ int main() {
 
 	GitLabAdapter adapter("GITLAB_API_TOKEN_PLACEHOLDER");
 	LedgerStore store;
-	ArchitectLedgerBot bot(std::move(adapter), std::move(store));
+	DevLedgerBot bot(std::move(adapter), std::move(store));
 
 	const bool ok = bot.handleWebhook(
 		fakePayload,
