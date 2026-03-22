@@ -1,6 +1,6 @@
-# The Dev's Ledger
+# 
 
-The Dev's Ledger is a passive documentation bot for GitLab Merge Requests.
+LittleBot is a passive documentation bot for GitLab Merge Requests.
 It captures the why behind code changes directly from MR discussion comments and maintains a living summary card at the top of the thread.
 
 ## What problem this solves
@@ -96,7 +96,7 @@ Expected behavior:
 
 ```markdown
 <!-- devs-ledger-summary-card -->
-## Dev's Ledger
+## 
 Passive record of why key technical decisions were made in this MR.
 
 | # | Timestamp (UTC) | Author | Decision |
